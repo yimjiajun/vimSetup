@@ -164,3 +164,9 @@ if has("cscope")
 	"   'd'   called: find functions that function under cursor calls
 	nmap <silent><Space>fcd :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
+if filereadable("ecfw-zephyr/build.sh")
+	set makeprg=cd\ $(west\ topdir)/$(west\ config\ manifest.path)\ &&\ ./build.sh
+elseif filereadable(".west")
+	set makeprg=cd\ $(west\ topdir)/$(west\ config\ manifest.path)\ &&\ west\ build\ -p=always
+endif
