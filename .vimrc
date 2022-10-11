@@ -132,6 +132,15 @@ let g:maplocalleader = ','
 	vnoremap <silent>p "_dP
 
 " ----------------------
+" browser
+" ----------------------
+if has('macunix')
+	nnoremap <silent>gx :silent execute '!open ' . shellescape('<cWORD>') <CR>
+else
+	nnoremap <silent>gx :silent execute '!xdg-open ' . shellescape('<cWORD>') <CR>
+endif
+
+" ----------------------
 " Session
 "-----------------------
 " =============================
