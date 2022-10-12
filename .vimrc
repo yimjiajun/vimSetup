@@ -3,7 +3,7 @@ set nocompatible
 filetype on
 filetype indent on
 
-colorscheme industry "buildin type
+colorscheme pablo "buildin type
 	set t_Co=256 " support 256 bits color
 	set background=dark " tell vim what color on background
 	set encoding=UTF-8
